@@ -1,6 +1,4 @@
-require('dotenv').config();
-
 module.exports = {
-    botToken: process.env.BOT_TOKEN,
-    solanaClusterUrl: process.env.SOLANA_CLUSTER_URL || 'https://api.mainnet-beta.solana.com',
+    botToken: process.env.BOT_TOKEN || process.env.TELEGRAM_BOT_TOKEN, // Your bot token
+    solanaClusterUrl: 'https://api.mainnet-beta.solana.com' // Example Solana cluster URL
 };
