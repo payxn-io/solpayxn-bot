@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 const bot = new TelegramBot(config.botToken);
 
 // Set webhook
-const URL = process.env.VERCEL_URL || 'https://your-vercel-deployment-url.vercel.app';  // You will replace this later
+const URL = process.env.VERCEL_URL || 'https://solpayxn-bot.vercel.app';  // You will replace this later
 const webhookUrl = `${URL}/bot${config.botToken}`;  // This sets up a unique endpoint for the bot webhook
 bot.setWebHook(webhookUrl);
 
