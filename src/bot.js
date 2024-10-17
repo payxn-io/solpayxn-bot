@@ -2,7 +2,7 @@ const express = require('express');
 const TelegramBot = require('node-telegram-bot-api');
 const { Connection, PublicKey, Keypair } = require('@solana/web3.js');
 const bodyParser = require('body-parser');
-const config = require('./config/config'); // Assumes you have a config file for environment variables
+const config = require('../config/config'); // Assumes you have a config file for environment variables
 
 // Initialize the express app
 const app = express();
