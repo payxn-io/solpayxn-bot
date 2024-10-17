@@ -11,6 +11,18 @@ const bot = new TelegramBot(config.botToken, { polling: true });
 const app = express();
 const port = process.env.PORT || 3000; // Use the port from Heroku, or default to 3000
 
+// Custom Keyboard Markup
+const mainMenu = {
+    reply_markup: {
+      keyboard: [
+        [{ text: "/createwallet" }],
+        [{ text: "/balance" }, { text: "/send" }]
+      ],
+      resize_keyboard: true,
+      one_time_keyboard: false
+    }
+  };
+
 // Basic route to confirm server is running
 app.get('/', (req, res) => {
     res.send('Payxn Telegram Bot is running!');
@@ -20,6 +32,12 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+// Start Command
+bot.onText(/\/start/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, "Welcome! Please choose an option:", mainMenu);
+  });
 
 // Telegram bot commands
 bot.onText(/\/createwallet/, (msg) => {
