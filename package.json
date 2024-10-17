@@ -1,15 +1,17 @@
 {
   "name": "solana-telegram-bot",
   "version": "1.0.0",
-  "main": "src/bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "@solana/web3.js": "^1.95.3",
-    "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1",
     "node-telegram-bot-api": "^0.66.0"
   }
 }
