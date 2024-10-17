@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000; // Use the port from Heroku, or default t
 
 // Basic route to confirm server is running
 app.get('/', (req, res) => {
-    res.send('Telegram Bot is running!');
+    res.send('Payxn Telegram Bot is running!');
 });
 
 // Start the Express server
